@@ -1,0 +1,16 @@
+body {
+    font-size: 1.5rem;
+}
+
+.hide{
+    display: none;
+}
+
+.error{
+    display: block;
+    color: red;
+}
+
+#showErrors {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weekly-assignment-3.css">
+    <title>Weekly Assignment 3</title>
+</head>
+
+<body>
+    <h1>Order Form</h1>
+    <p>Please be sure to complete the entire form before submitting your order.</p>
+    <div id="showErrors"></div>
+    <form action="http://ctec.clark.edu/~belgort/formprocessing/processform.php" method="POST">
+        <!-- First name -->
+        <label for="firstName">First Name</label>
+        <br>
+        <input type="text" id="firstName" name="firstname" maxlength="20">
+        <span id="errorFirstName" class="hide">Please fill in a First Name.</span>
+        <br>
+        <!-- Last name -->
+        <label for="lastName">Last Name</label>
+        <br>
+        <input type="text" id="lastName" name="lastname" maxlength="20">
+        <span id="errorLastName" class="hide">Please fill in a Last Name.</span>
+        <br>
+        <!-- Address -->
+        <label for="address">Address</label>
+        <br>
+        <input type="text" id="address" name="adress" maxlength="40">
+        <span id="errorAddress" class="hide">Please fill in an Address.</span>
+        <br>
+        <!-- City -->
+        <label for="city">City</label>
+        <br>
+        <input type="text" id="city" name=city maxlength="30">
+        <span id="errorCity" class="hide">Please fill in a City.</span>
+        <br>
+        <!-- State -->
+        <label for="state">Please select a state</label>
+        <br>
+        <select name="state" id="state">
+            <option value="-">Please select a state</option>
+            <option value="WA">Washington</option>
+            <option value="OR">Oregon</option>
+            <option value="NH">New Hampshire</option>
+            <option value="MA">Massachusetts</option>
+            <option value="PA">Pennsylvania</option>
+        </select>
+        <span id="errorState" class="hide">Please select a State.</span>
+        <br><br>
+        <!-- Products -->
+        <label for="products">Please select a product</label>
+        <br>
+        <select name="products" id="products">
+            <option value="-">Please select a product</option>
+            <option value="Pikachu">Pikachu</option>
+            <option value="Doraemon">Doraemon</option>
+            <option value="Kitt">Hello Kitty</option>
+            <option value="Totoro">Totoro</option>
+            <option value="Ponyo">Ponyo</option>
+        </select>
+        <span id="errorProducts" class="hide">Please select a Product.</span>
+        <br><br>
+        <!-- Quantity -->
+        <label for="qty">Quantity</label>
+        <br>
+        <input type="number" name="qty" id="qty" min="1" max="5">
+        <span id="errorQty" class="hide">Please enter a Quantity.</span>
+        <br><br>
+        <!-- Contact -->
+        <label for="yes">Can we contact you by phone?</label>
+        <br>
+        <input type="radio" name="contact" id="yes" value="yes" checked>
+        <label for="yes">Yes, I would like a phone call</label>
+        <input type="radio" name="contact" id="no" value="no">
+        <label for="no">No, Thank You</label>
+        <br><br>
+        <!-- Terms and Conditions -->
+        <label for="terms">Terms and Conditions</label>
+        <br>
+        <input type="checkbox" name="Terms and Conditions" id="terms" value="yes">
+        <label for="terms">I agree</label>
+        <span id="errorTerms" class="hide">Please agree with our terms before submitting the form.</span>
+        <br><br>
+        <!-- Submit button -->
+        <button id="submit">Submit My Order</button>
+    </form>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
